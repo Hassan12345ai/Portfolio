@@ -12,9 +12,10 @@
   --shadow: rgba(0, 0, 0, 0.3);
   --font-main: "Poppins", sans-serif;
 }
-
 /* --------------------------------------------------
    1️⃣ BASIC RESET
+   Purpose: Browser ke default margin/padding ko remove karna 
+   aur box-sizing ko border-box par set karna for consistent layout.
 -------------------------------------------------- */
 * {
   margin: 0;
@@ -24,68 +25,77 @@
 
 /* --------------------------------------------------
    2️⃣ BODY SECTION
+   Purpose: Page ke overall look ko define karna 
+   (background color, text color, font aur alignment)
 -------------------------------------------------- */
 body {
-  font-family: var(--font-main);
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  background-color: #1c1c28; /* Dark background for modern look */
+  color: #fff;
   display: flex;
   justify-content: center;
 }
 
 /* --------------------------------------------------
    3️⃣ MAIN CONTAINER
+   Purpose: Website ke content ko center align aur fixed width dena
 -------------------------------------------------- */
 .container {
   width: 1200px;
-  background-color: var(--bg-color);
+  background-color: #1c1c28;
 }
 
 /* --------------------------------------------------
    4️⃣ HEADER SECTION
+   Purpose: Logo, navigation menu aur social icons ka layout
 -------------------------------------------------- */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Logo left, menu right */
   align-items: center;
   padding: 25px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Logo styling — branding highlight */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--accent-color);
+  color: #f4c542; /* Highlight color for brand name */
 }
 
+/* Navigation Menu styling */
 nav ul {
   list-style: none;
   display: flex;
   gap: 40px;
 }
 
+/* Navigation links — clean & minimal hover transition */
 nav a {
-  color: var(--light-text);
+  color: #ccc;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
 nav a:hover {
-  color: var(--accent-color);
+  color: #f4c542;
 }
 
+/* Social media icons — top-right side */
 .social-icons a {
   text-decoration: none;
-  color: var(--light-text);
+  color: #ccc;
   margin-left: 20px;
   transition: 0.3s;
 }
 .social-icons a:hover {
-  color: var(--accent-color);
+  color: #f4c542;
 }
 
 /* --------------------------------------------------
    5️⃣ HERO SECTION
+   Purpose: Introduction area — text, image aur side info
 -------------------------------------------------- */
 .hero {
   display: flex;
@@ -94,6 +104,7 @@ nav a:hover {
   padding: 80px 0;
 }
 
+/* Left content — headings & intro text */
 .hero-left {
   flex: 1;
   padding-right: 50px;
@@ -101,25 +112,26 @@ nav a:hover {
 
 .hero-left h2 {
   font-size: 2rem;
-  color: var(--accent-color);
+  color: #f4c542; /* Accent color heading */
   letter-spacing: 2px;
 }
 
 .hero-left h1 {
   font-size: 3.8rem;
   margin: 15px 0;
-  color: var(--text-color);
+  color: #fff;
   font-weight: 700;
 }
 
 .hero-left p {
-  color: var(--secondary-text);
+  color: #aaa;
   max-width: 500px;
   margin-bottom: 30px;
   font-size: 1rem;
   line-height: 1.8;
 }
 
+/* Center image — portfolio display image */
 .center-image {
   width: fit-content;
   display: flex;
@@ -136,22 +148,26 @@ nav a:hover {
   transform: scale(3.5);
 }
 
+/* Right section — small info cards or links */
 .hero-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .hero-right h3 {
-  color: var(--accent-color);
+  color: #f4c542;
   font-size: 1.3rem;
 }
 .hero-right p {
-  color: var(--light-text);
+  color: #bbb;
   line-height: 1.6;
 }
+
+/* Right section links hover animation */
 .hero-right a {
-  color: var(--accent-color);
+  color: #f4c542;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
@@ -160,15 +176,30 @@ nav a:hover {
   transform: translateX(5px);
 }
 
+/* Hero section — social links below text */
+.hero-socials {
+  margin-top: 20px;
+}
+.hero-socials a {
+  color: #ccc;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.hero-socials a:hover {
+  color: #f4c542;
+}
+
 /* --------------------------------------------------
    6️⃣ TRUSTED BY SECTION
+   Purpose: Clients/Companies logos heading area
 -------------------------------------------------- */
 .trusted-by {
   text-align: center;
   margin: 80px 0 40px;
 }
 .trusted-by h2 {
-  color: var(--accent-color);
+  color: #f4c542;
   margin-bottom: 25px;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -176,6 +207,7 @@ nav a:hover {
 
 /* --------------------------------------------------
    7️⃣ BRAND SECTION
+   Purpose: Display of brand/company logos
 -------------------------------------------------- */
 .brand-section {
   width: 1200px;
@@ -186,9 +218,10 @@ nav a:hover {
   background-color: #1c1c1c;
   padding: 25px 0;
   border-radius: 15px;
-  box-shadow: 0 0 15px var(--shadow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Brand logos alignment */
 .brand-logos {
   display: flex;
   justify-content: space-evenly;
@@ -208,6 +241,7 @@ nav a:hover {
 
 /* --------------------------------------------------
    8️⃣ SERVICES SUMMARY SECTION
+   Purpose: Overview of services & performance stats
 -------------------------------------------------- */
 .services-summary {
   display: flex;
@@ -217,6 +251,7 @@ nav a:hover {
   gap: 80px;
 }
 
+/* Left text part — heading & about info */
 .services-summary .left {
   flex: 1;
   text-align: left;
@@ -224,51 +259,80 @@ nav a:hover {
 .services-summary .left h2 {
   font-size: 2.2rem;
   margin-bottom: 15px;
-  color: var(--text-color);
+  color: #fff;
 }
 .services-summary .left p {
-  color: var(--secondary-text);
+  color: #aaa;
   max-width: 500px;
   margin-bottom: 45px;
   line-height: 1.7;
   font-size: 1rem;
 }
 
+/* Stats grid — two-column layout */
 .stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 25px 50px;
 }
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
 .stats h3 {
-  color: var(--accent-color);
+  color: #f4c542;
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 6px;
 }
 .stats p {
-  color: var(--text-color);
+  color: #fff;
   font-size: 0.95rem;
 }
 
+/* Right side — list of services with icons */
+.services-summary .right {
+  flex: 1;
+  text-align: left;
+}
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Individual service box */
 .service-item {
-  background-color: var(--card-bg);
+  background-color: #2a2a3d;
   padding: 15px 20px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   gap: 15px;
-  color: var(--text-color);
+  color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 .service-item:hover {
-  background-color: var(--accent-color);
+  background-color: #f4c542;
   color: #000;
   transform: translateY(-4px);
 }
 
+/* Service icons */
+#photo_1,
+#photo_2,
+#photo_3 {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 /* --------------------------------------------------
    9️⃣ MAIN SERVICES SECTION
+   Purpose: Highlight major service categories
 -------------------------------------------------- */
 .main-services {
   display: flex;
@@ -277,57 +341,65 @@ nav a:hover {
   padding: 80px 0;
 }
 
+/* Service boxes with hover animation */
 .box {
-  background-color: var(--card-bg);
+  background-color: #2a2a3d;
   padding: 30px;
   border-radius: 15px;
   width: 30%;
   transition: 0.3s;
 }
 .box h3 {
-  color: var(--accent-color);
+  color: #f4c542;
   margin-bottom: 15px;
   font-size: 1.4rem;
 }
 .box p {
-  color: var(--light-text);
+  color: #bbb;
   line-height: 1.6;
 }
 .box:hover {
-  background-color: var(--accent-color);
+  background-color: #f4c542;
   color: #000;
   transform: translateY(-10px);
 }
 .icon{
-  width: 50px;
+  width: 60px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 .icon2{
-  width: 50px;
+  width: 60px;
   height: 50px;
- border-radius: 50%;
+  border-radius: 10px;
+}
+:hover.icon{
+  transform: scale(1.1);
+}
+:hover.icon2{
+  transform: scale(1.1);
 }
 .logo1{
-  width: 30px;
-  height: 35px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
 }
 .logo2{
-  width: 30px;
-  height: 35px;
-   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
 }
+
 .logo3{
-  width: 30px;
-  height: 35px;
-   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
 }
 .logo4{
-  width: 30px;
-  height: 35px;
-   border-radius: 30%;
+  width: 40px;
+  height: 40px;
 }
+
 /* --------------------------------------------------
    📱 MEDIA QUERIES
    Purpose: Responsive design for tablets and mobiles
@@ -400,5 +472,5 @@ nav a:hover {
   }
   .center-image img {
     transform: scale(1.2);
-  }
+}
 }
