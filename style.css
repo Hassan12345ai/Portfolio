@@ -400,148 +400,168 @@ nav a:hover {
   height: 40px;
 }
 
-/* --------------------------------------------------
-    MEDIA QUERIES
-   Purpose: Responsive design for tablets and mobiles
--------------------------------------------------- */
+/* --------------------------------------------------/* ✅ RESPONSIVE FIXED MEDIA QUERIES */
 
-/* 💻 Tablets (max-width: 992px) */
+/* 🌐 Tablet View (max-width: 992px) */
 @media (max-width: 992px) {
   .container {
     width: 95%;
   }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 60px 0;
   }
+
   .hero-left {
     padding-right: 0;
   }
+
   .center-image {
-    margin: 40px 0;
+    margin: 40px 0 20px 0;
   }
+
   .center-image img {
-    transform: scale(2);
+    transform: scale(1.8);
+    margin: 0 auto;
   }
+
   .services-summary {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 50px;
   }
+
   .main-services {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
+
   .box {
-    width: 80%;
+    width: 85%;
   }
 }
 
-/*  Mobile Devices (max-width: 768px) */
-/* --------------------------------------------------
-    EXTRA MOBILE MEDIA (max-width: 600px)
-   Purpose: Small screen ke liye improved spacing, font-size aur layout adjustments
--------------------------------------------------- */
-@media (max-width: 600px) {
+/* 📱 Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
   body {
     flex-direction: column;
-    padding: 0 10px;
+    padding: 0 15px;
   }
 
   header {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 0;
+    gap: 12px;
   }
 
   .hero-left h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
+
   .hero-left h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.3;
   }
+
   .hero-left p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
   }
 
-  .center-image {
-    margin: 30px 0;
-  }
   .center-image img {
-    transform: scale(1.1);
-  }
-
-  .hero-right {
-    text-align: center;
+    transform: scale(1.4);
   }
 
   .brand-section {
     flex-direction: column;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
   }
+
   .brand-logos {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
   }
+
   .brand-logos img {
-    width: 50px;
+    width: 55px;
   }
 
   .services-summary {
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    padding: 60px 0;
   }
+
   .stats {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .main-services {
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    gap: 20px;
+    padding: 60px 0;
   }
+
   .box {
     width: 100%;
-    margin-bottom: 20px;
+  }
+}
+
+/* 📱 Small Mobile View (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero-left h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-left p {
+    font-size: 0.9rem;
+  }
+
+  .center-image img {
+    transform: scale(1.1);
+    width: 150px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .stats h3 {
+    font-size: 1.3rem;
   }
 
   footer {
     text-align: center;
-    font-size: 0.9rem;
-    padding: 20px 0;
+    font-size: 0.8rem;
+    padding: 15px 0;
   }
-}
-
-
-/* 📱 Small Phones (max-width: 480px) */
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.4rem;
-  }
-  .hero-left h1 {
-    font-size: 1.8rem;
-  }
-  .center-image img {
-    transform: scale(1.2);
-}
 }
